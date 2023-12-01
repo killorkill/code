@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="w-100 d-flex justify-content-between">
+        <h3 style="margin-left:20px;">Admin</h3>
+        <div class="dropdown">
+            <button type="button" class="btn btn dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#" ><i class="fa fa-user" aria-hidden="true"></i>User Profile</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <nav>
+
+        <input class="in"  type="text" placeholder="Search...">
+        <span> <button class="in"><i class="fa fa-search " aria-hidden="true"></i></button></span>
+
+        <div class="list-group">
+            <div class="">
+                <div class="" id="sidebar">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item"><a class="list-group-item list-group-item-action" href="../html/ListProduct.html">Products</a></li>
+                        <li class="nav-item"><a class="list-group-item list-group-item-action" href="../html/ListUser.html">Customers</a></li>
+                        <li class="nav-item"><a class="list-group-item list-group-item-action" href="../html/Employee.html">Employees</a></li>
+                        <li class="nav-item"><a class="list-group-item list-group-item-action" href="#">Reports</a></li>
+
+                        <li class="nav-item">
+                            <a class="list-group-item list-group-item-action nav-link collapsed" href="#submenu1" data-toggle="collapse" data-target="#submenu1">WareHouse</a>
+                            <div class="collapse" id="submenu1" aria-expanded="false">
+                                <ul class="flex-column nav">
+                                    <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="">Import</a></li>
+                                    <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="">Export</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="list-group-item list-group-item-action nav-link collapsed" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1">Bills</a>
+                            <div class="collapse" id="submenu1sub1" aria-expanded="false">
+                                <ul class="flex-column nav">
+                                    <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="">Import Bills</a></li>
+                                    <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="">Export Bills</a></li>
+                                    <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="">Import History</a></li>
+                                    <li class="nav-item"><a class="nav-link list-group-item list-group-item-action" href="">Export History</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <article>
+
+        <h2>List Product</h2>
+        <div class="select">
+            <a href="../html/addProduct.html" class="btn btn-default" style="background-color:rgb(152, 160, 152);">Add Product</a>
+        </div>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+            <tr style="background-color: rgb(238, 235, 235);">
+                <th style="width:100px;">Image</th>
+                <th style="width:100px;">Name</th>
+                <th style="width:400px;">Description</th>
+                <th style="width:100px;">Price</th>
+                <th style="width:100px;">Mount</th>
+                <th >Status</th>
+                <th></th>
+
+
+            </tr>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td>
+                    <a href="../html/EditProduct.html"><button type="button" id="plus2"><i class="fa fa-edit" aria-hidden="true"></i></button></a>
+                    <button type="button" id="X" ><i class="fa fa-times" aria-hidden="true"></i></button>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td>
+                    <a href="../html/EditProduct.html"><button type="button" id="plus2"><i class="fa fa-edit" aria-hidden="true"></i></button></a>
+                    <button type="button" id="X" ><i class="fa fa-times" aria-hidden="true"></i></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td>
+                    <a href="../html/EditProduct.html"></a><button type="button" id="plus2"><i class="fa fa-edit" aria-hidden="true"></i></button></a>
+                    <button type="button" id="X" ><i class="fa fa-times" aria-hidden="true"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td>
+                    <a href="../html/EditProduct.html"></a><button type="button" id="plus2"><i class="fa fa-edit" aria-hidden="true"></i></button></a>
+                    <button type="button" id="X" ><i class="fa fa-times" aria-hidden="true"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td>
+                    <a href="../html/EditProduct.html"></a><button  type="button" id="plus2"><i class="fa fa-edit" aria-hidden="true"></i></button></a>
+                    <button type="button" id="X" ><i class="fa fa-times" aria-hidden="true"></i></button>
+                </td>
+            </tr>
+            </tbody>
+            </thead>
+        </table>
+
+
+
+    </article>
+</section>
+
+</body>
+
+</html>

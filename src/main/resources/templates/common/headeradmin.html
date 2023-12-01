@@ -1,0 +1,64 @@
+<div th:fragment="header">
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: darkcyan;">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img th:src="@{/Backend/dist/img/AdminLTELogo.png}" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">Admin</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item has-treeview menu-open">
+            <a th:href = "@{/home}" class="nav-link">
+              <p>
+                Trang chủ
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a th:href="@{/admin/QuanLyTaiKhoan/DanhSach}" class="nav-link">
+              <p>Quản Lí Tài Khoản</p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a th:href="@{/admin/QuanLyVaiTro/DanhSach}" class="nav-link">
+              <p>
+                Quản Lý Vai Trò
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a th:href="@{/admin/QuanLySanPham/DanhSach}" class="nav-link">
+              <p>
+                Quản Lý Sản Phẩm
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a th:href="@{/admin/QuanLyDonHang/DanhSach}" class="nav-link">
+              <p>
+                Quản Lý Đơn Hàng
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a th:href="@{/admin/QuanLyDonHang/revenue/all}" class="nav-link">
+              <p>
+                Báo cáo
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+</div>

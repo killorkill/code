@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thống kê</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/Backend/plugins/fontawesome-free/css/all.min.css}">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" th:href="@{/Backend/plugins/datatables-bs4/css/dataTables.bootstrap4.css}">
+    <link rel="stylesheet" th:href="@{/Backend/dist/css/adminlte.min.css}">
+
+    <link th:href="@{/Frontend/css/startmin.css}" rel="stylesheet">
+    <link th:href="@{/Frontend/css/morris.css}" rel="stylesheet">
+    <link th:href="@{/Frontend/css/metisMenu.min.css}" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <div th:replace="common/headeradmin :: header"></div>
+
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Thống kê</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6" style="padding-right: 11px;">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            <div class="row"
+                                                 style="background-color: #337ab7;border-color: #337ab7; color: #fff;text-align: right;box-sizing: border-box;font-size: 20px;padding: 5px;">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-user-alt fa-5x"></i>
+                                                </div>
+                                                <div class="col-md-9 text-right">
+                                                    <div class="huge" th:text="${totalAccount}"></div>
+                                                    <div>Khách hàng</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a th:href="@{/admin/QuanLyTaiKhoan/DanhSach}">
+                                            <div class="panel-footer">
+                                                <span class="pull-left">Xem chi tiết</span>
+                                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6" style="padding-right: 11px;">
+                                    <div class="panel panel-green">
+                                        <div class="panel-heading">
+                                            <div class="row"
+                                                 style="background-color: #5cb85c;border-color: #5cb85c; color: #fff;text-align: right;box-sizing: border-box;font-size: 20px;padding: 5px;">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-tasks fa-5x"></i>
+                                                </div>
+                                                <div class="col-md-9 text-right">
+                                                    <div class="huge" th:text="${totalProduct}"></div>
+                                                    <div>Sản phẩm</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a th:href="@{/admin/QuanLySanPham/DanhSach}">
+                                            <div class="panel-footer">
+                                                <span class="pull-left">Xem chi tiết</span>
+                                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="panel panel-yellow">
+                                        <div class="panel-heading">
+                                            <div class="row"
+                                                 style="background-color: #f0ad4e;border-color: #f0ad4e; color: #fff;text-align: right;
+                                                 box-sizing: border-box;padding: 20px;">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                                </div>
+                                                <div class="col-md-9 text-right">
+                                                    <div class="huge" th:text="${totalOrder}"></div>
+                                                    <div>Đơn hàng</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a th:href="@{/admin/QuanLyDonHang/DanhSach}">
+                                            <div class="panel-footer">
+                                                <span class="pull-left">Xem chi tiết</span>
+                                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="panel panel-yellow">
+                                        <div class="panel-heading">
+                                            <div class="row"
+                                                 style="background-color: #d9534f;border-color: #d9534f; color: #fff;text-align: right;box-sizing: border-box;font-size: 20px;padding: 35px;">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-caret-right fa-5x"></i>
+                                                </div>
+                                                <div class="col-md-10 text-right">
+                                                    <div class="huge" th:text="${totalRevenue}"></div>
+                                                    <div>Tổng doanh thu</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a th:href="@{/admin/download/file}">
+                                            <div class="panel-footer">
+                                                <span class="pull-left">Tải về báo cáo</span>
+                                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Mã đơn hàng</th>
+                                    <th>Trạng Thái</th>
+                                    <th>Thời gian</th>
+                                    <th>Tổng tiền</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="tableOrderDTO : ${tableOrderDTOs}">
+                                    <td th:text="${tableOrderDTO.name}"></td>
+                                    <td th:text="${tableOrderDTO.checked == true}?'Đã giao hàng':'Chưa giao hàng' "></td>
+                                    <td th:text="${tableOrderDTO.date}"></td>
+                                    <td th:text="${tableOrderDTO.getTotalMoney()}"></td>
+                                </tr>
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <div th:replace="common/footeradmin :: footer"></div>
+</div>
+
+<script th:src="@{/Backend/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/Backend/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/Backend/plugins/datatables/jquery.dataTables.js}"></script>
+<script th:src="@{/Backend/plugins/datatables-bs4/js/dataTables.bootstrap4.js}"></script>
+<script th:src="@{/Backend/dist/js/adminlte.min.js}"></script>
+<script th:src="@{/Backend/dist/js/demo.js}"></script>
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+        });
+    });
+</script>
+
+</body>
+</html>
